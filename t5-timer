@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="t"></p>
+
+<script>
+setInterval(timer,1000);
+
+function timer(){
+  const date=new Date();
+  document.getElementById("t").innerHTML=date.toLocaleTimeString ();
+}
+</script>
+
+</body>
+</html>
