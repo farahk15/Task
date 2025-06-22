@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>first button</h2>
+
+<button
+onclick="document.getElementById('b').innerHTML = 'hello world'">
+Click me.</button>
+
+<p id="b"></p>
+
+
+
+</body>
+</html>
