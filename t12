@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="text" id="name"/>
+    <input type="text" id="age"/> 
+    <button onclick="submitInfo()">Submit</button>
+
+    <script>
+      function submitInfo(){
+        let n=document.getElementById("name").value;
+        let a=document.getElementById("age").value;
+        let t=new Date().toLocaleString();
+
+        let user={
+          name:n,
+          age:a,
+          time:t
+        };
+
+        alert(`Your name is: ${user.name}\nYour age is: ${user.age}\nTime: ${user.time}`);
+      }
+    </script>
+  </body>
+</html>
