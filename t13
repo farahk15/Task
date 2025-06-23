@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+   <input type="text" id="name" placeholder="Name"/>
+    
+   <button onclick="submet()">submit</button>
+  <script>
+    function submet(){
+     const name=document.getElementById("name").value
+    fetch(`https://api.agify.io?name=${name}`)
+    .then(response=>response.json())
+    .then(data=>{const {age}=data;
+      alert(`Your name is: ${name}\nYour age is: ${age}`);
+    })
+     
+     .catch(error=>{alert("error"+error);
+       
+     });
+      }
+  
+     </script>
+  </body>
+</html>
