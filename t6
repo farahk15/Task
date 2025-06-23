@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <body>
+ <button onclick="b1()">button1</button>
+ <button onclick="b2()">button2</button>
+ <button  onclick="b3()">button3</button>
+ <button onclick="b4()">button4</button>
+ <button  onclick="b5()">button5</button>
+      <script>
+  function b1(){
+    let arr=[];
+    for (let i=0;i<=100;i++) arr.push(i);
+    arr=arr.filter(n=>n%3==0)
+    console.log("b1 ",arr)
+  }
+     
+      function b2(){
+    let arr=[];
+    for (let i=0;i<=100;i++) arr.push(i);
+    for (let i=101;i<=150;i++) arr.push(i);
+    
+    console.log("b2 " ,arr)
+  }
+  
+  
+   function b3(){
+    let arr=[];
+    for (let i=0;i<=100;i++) arr.push(i);
+    arr=arr.map(n=>n+3)
+    console.log("b3 ",arr)
+  }
+       
+  
+  
+   function b4(){
+    let arr=[];
+    for (let i=0;i<=100;i++) arr.push(i);
+  let sliced =arr.slice(20,41)
+    console.log("b4 ",sliced)
+  }
+       
+  
+   function b5(){
+    let arr=[];
+    for (let i=0;i<=100;i++) arr.push(i);
+    shuffleArray(arr);
+   console.log("Shuffled Array:", arr);
+    arr.sort((a,b) =>b-a);
+    console.log("b5 ", arr)
+  }
+       function shuffleArray(arr){
+    for(let i=arr.length-1;i>0; i--){
+      let j=Math.floor(Math.random()*(i+1));
+      [arr[i],arr[j]]=[arr[j],arr[i]];
+    }}
+  
+  
+  
+         
+      </script>
+  </body>
+</html>
